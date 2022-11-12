@@ -1,4 +1,4 @@
-COVERAGE_FILE=coverage.
+COVERAGE_FILE=coverage.out
 BIN_DIR=bin
 
 all: build
