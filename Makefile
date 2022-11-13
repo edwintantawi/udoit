@@ -8,14 +8,12 @@ prepare:
 	@go install github.com/onsi/ginkgo/v2/ginkgo@latest
 	@go mod download
 
-build: build-cli
+build:
+	@echo "Building ..."
+	@go build -o ${BIN_DIR}/udoit cmd/main.go
 
-build-cli:
-	@echo "Building CLI ..."
-	@go build -o ${BIN_DIR}/udoit-cli cmd/cli/main.go
-
-run-cli:
-	@go run cmd/cli/main.go
+run:
+	@go run cmd/main.go
 
 test:
 	@echo "Running tests ..."
